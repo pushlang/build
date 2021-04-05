@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+echo "----env----"
+go env GOOS GOARCH
+
+echo "----list----"
+go tool dist list
+
+echo "----build----"
+GOOS=linux GOARCH=ppc64 go build -o linux64
+file linux64
+GOOS=windows GOARCH=386 go build -o windows32
+file windows32.exe

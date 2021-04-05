@@ -1,7 +1,7 @@
 package main
 
 import (
-	"buildTags/ldflags/build"
+	"build/ldflags/build"
 	"fmt"
 )
 
