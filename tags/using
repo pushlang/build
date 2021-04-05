@@ -1,0 +1,7 @@
+// +build pro enterprise # pro OR enterprise
+// +build pro,enterprise # pro AND enterprise
+// +build !pro # NOT pro
+<empy line>
+
+go build -tags enterprise
+go build -tags "enterprise pro"

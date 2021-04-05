@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+go build -o v1.0.0 -v -ldflags="-X 'main.Version=v1.0.0' -X 'buildTags/ldflags/build.User=$(id -u -n)' -X 'buildTags/ldflags/build.Time=$(date)'"
+./v1.0.0
+
+go build -o v2.0.0 -v -ldflags="-X 'main.Version=v2.0.0' -X 'buildTags/ldflags/build.User=$(id -u -n)' -X 'buildTags/ldflags/build.Time=$(date)'"
+./v2.0.0
