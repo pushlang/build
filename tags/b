@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+
+# // +build pro enterprise # pro OR enterprise
+# // +build pro,enterprise # pro AND enterprise
+# // +build !pro # NOT pro
+# <empy line>
+
+go build -o free
+echo "--------"
+./free
+
+go build -o pro -tags "pro"
+echo "--------"
+./pro
+
+go build -o enterprise -tags "pro enterprise"
+echo "--------"
+./enterprise
+
+rm free pro enterprise
+
+ls
